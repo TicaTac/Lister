@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:gravity="center_horizontal|center_vertical"
+
+        android:id="@+id/TopLinHorzLayout"
+        android:layout_alignParentTop="true"
+        android:background="#ecf8fe">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView2"
+            android:layout_weight=".33"
+            android:src="@drawable/settings"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView"
+            android:layout_weight=".33"
+            android:src="@drawable/settings" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView6"
+            android:layout_weight=".33"
+            android:src="@drawable/settings" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/CenterLinVertLayout"
+        >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+
+        android:id="@+id/bottomLinHorzLayout"
+        android:layout_alignParentBottom="true"
+        android:background="#fff3fe">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button"
+            android:layout_gravity="bottom"
+            android:layout_weight=".5" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button2"
+            android:layout_weight=".5" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_below="@id/TopLinHorzLayout"
+        android:layout_above="@id/bottomLinHorzLayout"
+        android:clickable="false"
+        android:id="@+id/CenterTableLayout"
+        android:measureWithLargestChild="false"
+        android:background="#ffefef">
+        <TableRow>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clockIV"
+            android:src="@drawable/alarmclock"
+            android:layout_weight=".5"
+            android:layout_column="1"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView4"
+            android:src="@drawable/star"
+            android:layout_weight=".5"
+            android:layout_column="2"
+             />
+        </TableRow>
+
+        <TableRow>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView5"
+            android:src="@drawable/star"
+            android:layout_weight=".5"
+            android:layout_column="1"
+          />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView7"
+            android:src="@drawable/star"
+            android:layout_weight=".5"
+            android:layout_column="2"
+          />
+        </TableRow>
+    </TableLayout>
+
+
+</RelativeLayout>
