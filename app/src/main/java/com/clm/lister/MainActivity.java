@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         arrayList.add("Send Email");
         arrayList.add("Add to Contacts");
         arrayList.add("Alarm Clock");
+        arrayList.add("Rest");
         arrayList.add("Call Me");
         arrayList.add("Find My Location");
         arrayList.add("Settings");
@@ -49,12 +50,7 @@ public class MainActivity extends AppCompatActivity {
         switch (action) {
             case "Send Email" :
                 Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-                String[] emailAddress=new String[2];
-                emailAddress[0]="lior.keshet@gmail.com";
-                emailAddress[1]="lior.keshet@gmail.com";
-
                 emailIntent.setData(Uri.parse("mailto:lior.keshet@gmail.com")); // only email apps should handle this
-//                emailIntent.putExtra(Intent.EXTRA_EMAIL, "");
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Dear");
 
                 if (emailIntent.resolveActivity(getPackageManager()) != null) {
@@ -65,6 +61,10 @@ public class MainActivity extends AppCompatActivity {
 
             case "Add to Contacts":
             case "Alarm Clock":
+            case "Rest":
+                Intent reccomendIntent= new Intent(this, reccomendActivity.class);
+                startActivityForResult (reccomendIntent,1);
+                break;
             case "Call Me":
             case "Find My Location":
             case "Settings":
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             //
-            
+
             default:
                 Toast.makeText(MainActivity.this,"::"+action,Toast.LENGTH_SHORT).show();
 

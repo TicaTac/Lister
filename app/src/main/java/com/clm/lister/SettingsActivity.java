@@ -41,12 +41,12 @@ public class SettingsActivity extends AppCompatActivity {
                      //   break;
                     case "Set Date":// open set date dialog
 
-                        DatePickerDialog dpd=new DatePickerDialog(SettingsActivity.this, DatePickerDialog.OnDateSetListener(){
+                        //DatePickerDialog dpd=new DatePickerDialog(SettingsActivity.this, DatePickerDialog.OnDateSetListener(){
                             
 
-                        },2013, 0 ,0);
+                       // },2013, 0 ,0);
 
-                        dpd.show();
+                     //   dpd.show();
 
                         //   break;
                     default:
